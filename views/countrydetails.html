@@ -1,0 +1,60 @@
+﻿<div class="row top-buffer">
+
+    <div class="col-md-10 col-md-offset-2 text-left spacer">
+        <img ng-src="{{cdc.country.countryFlagURL}}" class="img-rounded" /><span class="countryname">{{cdc.country.countryName }}</span>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4 col-md-offset-2  text-right">
+        Population of Country:
+    </div>
+    <div class="col-md-4 text-left">
+        {{cdc.country.population | number}}
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4 col-md-offset-2  text-right">
+        Area:
+    </div>
+    <div class="col-md-4 text-left">
+        {{cdc.country.areaInSqKm | number}}
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4 col-md-offset-2  text-right">
+        Capital:
+    </div>
+    <div class="col-md-4 text-left">
+        {{cdc.country.capital }}
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4 col-md-offset-2  text-right">
+        Population of Capital:
+    </div>
+    <div class="col-md-4 text-left">
+       {{ cdc.country.captialPopulation | number }}
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4 col-md-offset-2  text-right">
+        {{ cdc.country.neighbours.length }} Neighbour(s): 
+        
+    </div>
+    <div class="col-md-4 text-left">
+        <span ng-repeat="neighbour in cdc.country.neighbours" class="neighbour">
+            <a href="{{ '#/countrydetails/' + neighbour.countryCode }}">{{neighbour.countryName}} </a>
+        </span>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8 col-md-offset-4 top-buffer">
+        <img ng-src="{{cdc.country.countryImageURL}}" />
+    </div>
+</div>
+<div class="row top-buffer">
+    <div class="col-md-8 col-md-offset-4">
+        <a href="#/" class="btn btn-primary">Home</a>
+        <a href="#/countries" class="btn btn-default">Browse Countries</a>
+    </div>
+</div>

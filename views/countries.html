@@ -1,0 +1,27 @@
+﻿<div class="row top-buffer">
+    <div class="col-md-8 col-md-offset-2">
+        <table class="table table-bordered table-hover table-striped">
+            <tr>
+                <th>Name</th>
+                <th>Country Code</th>
+                <th>Capital</th>
+                <th>Area in km2</th>
+                <th>Population</th>
+                <th>Continent</th>
+            </tr>
+            <tr ng-repeat="country in cc.countries" class="fx-fade-down fx-speed-1500 fx-easing-quad" ng-click="cc.setSelected(country);">
+                <td>{{ country.countryName }}</td>
+                <td>{{ country.countryCode }}</td>
+                <td>{{ country.capital }}</td>
+                <td>{{ country.areaInSqKm | number}}</td>
+                <td>{{ country.population | number}}</td>
+                <td>{{ country.continent }}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="row top-buffer">
+    <div class="col-md-7 col-md-offset-5">
+        <a href="#/" class="btn btn-primary">Home</a>
+    </div>
+</div>
