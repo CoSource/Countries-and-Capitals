@@ -1,7 +1,7 @@
 angular.module('caps', ['ngRoute', 'ngFx', 'ngAnimate', 'countries', 'country'])
-    /* .constant('config', {
+    .constant('config', {
          'userName': 'cosource'
-     })*/
+     })
     .run(function ($rootScope, $location, $timeout) {
         $rootScope.$on('$routeChangeError', function () {
             $location.path("/error");

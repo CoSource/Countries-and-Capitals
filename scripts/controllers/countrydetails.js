@@ -1,7 +1,7 @@
 ﻿angular.module('country', [
     'caps.models.country'
 ])
-    .controller('CountryDetailsController', function ($http, $window, $routeParams, CountryModel) {
+    .controller('CountryDetailsController', function ($http, $location, $routeParams, CountryModel) {
         var vm = this;
 
         CountryModel.getCountry().then(function(result) {
